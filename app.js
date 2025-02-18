@@ -1,3 +1,4 @@
+
 /**
  * <div id="parent">
  *       <div id="child">
@@ -37,26 +38,13 @@ const heading = React.createElement(
 "Namaste React"
 );
 
-const fn = () => true;
+//JSX (transpiled before it reaches to the JS ) - transpiling by JS - DONE by BABEL
 
-const fn2 =() =>{
-    return true;
-}
+//JSX =>  React.createElement = ReactElement-JS object =HTMLElement(render)
 
-// React component
-// Class Based Component -- old way 
-// Functional component  -- new way
+const jsxHeading = <h1 id="heading">Namaste React using JSX </h1>
 
-// React functional component 
-const HeadingComponent = ()=> {
-    return <h1> Namaste React Functional Component</h1>;
-};
-
-const HeadingComponent2 = ()=> (
-    <h1 className="heading"> Namaste React Functional Component</h1>
-);
-
-
+console.log(jsxHeading);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(jsxHeading);
