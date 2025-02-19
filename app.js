@@ -32,15 +32,22 @@ import ReactDOM from "react-dom/client";
 
 // React.createElement = ReactElement-JS object =HTMLElement(render)
 
-const heading = React.createElement(
-"h1",
-{id : "heading"},
-"Namaste React"
+const heading=(
+<h1 className="head" tabIndex="5">
+    Namaste React using JSX
+</h1>
 );
 
-//JSX (transpiled before it reaches to the JS ) - transpiling by JS - DONE by BABEL
+// React Functional component
+const HeadingComponent = ()=> {
+    return <h1> Namaste React Functional Component</h1>;
+};
+// Both are same
+const HeadingComponent2 = ()=> (
+    <h1 className="Heading"> Namaste React Functional Component</h1>
+);
 
-//JSX =>  React.createElement = ReactElement-JS object =HTMLElement(render)
+
 
 const jsxHeading = <h1 id="heading">Namaste React using JSX </h1>
 
