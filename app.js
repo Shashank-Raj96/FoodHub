@@ -49,9 +49,7 @@ const HeadingComponent2 = ()=> (
 
 
 
-const jsxHeading = <h1 id="heading">Namaste React using JSX </h1>
 
-console.log(jsxHeading);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(jsxHeading);
+root.render(Heading);
