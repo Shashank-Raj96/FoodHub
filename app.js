@@ -39,12 +39,14 @@ const heading=(
 );
 
 // React Functional component
-const HeadingComponent = ()=> {
-    return <h1> Namaste React Functional Component</h1>;
-};
+// const HeadingComponent = ()=> {
+//     return <h1> Namaste React Functional Component</h1>;
+//};
 // Both are same
 const HeadingComponent2 = ()=> (
+  <div id="container"> 
     <h1 className="Heading"> Namaste React Functional Component</h1>
+    </div>
 );
 
 
@@ -52,4 +54,4 @@ const HeadingComponent2 = ()=> (
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(Heading);
+root.render(<HeadingComponent2/>);
