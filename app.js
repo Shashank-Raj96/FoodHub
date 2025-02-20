@@ -7,7 +7,7 @@
  *       </div>
  * </div>
  */
-//gfgfh
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 
@@ -31,9 +31,12 @@ import ReactDOM from "react-dom/client";
 // root.render(parent);
 
 // React.createElement = ReactElement-JS object =HTMLElement(render)
+ const elem =<span>React Element</span>;
 
-const heading = (
+
+const title = (
 <h1 className="head" tabIndex="5">
+  {elem}
    Namaste React using JSX
 </h1>
 );
@@ -43,8 +46,11 @@ const heading = (
 //     return <h1> Namaste React Functional Component</h1>;
 //};
 // Both are same
+
+
 const HeadingComponent = ()=> (
   <div id="container"> 
+ {title}
     <h1 className="Heading"> Namaste React Functional Component</h1>
     </div>
 );
