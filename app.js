@@ -32,9 +32,9 @@ import ReactDOM from "react-dom/client";
 
 // React.createElement = ReactElement-JS object =HTMLElement(render)
 
-const heading=(
+const heading = (
 <h1 className="head" tabIndex="5">
-    Namaste React using JSX
+   Namaste React using JSX
 </h1>
 );
 
@@ -43,7 +43,7 @@ const heading=(
 //     return <h1> Namaste React Functional Component</h1>;
 //};
 // Both are same
-const HeadingComponent2 = ()=> (
+const HeadingComponent = ()=> (
   <div id="container"> 
     <h1 className="Heading"> Namaste React Functional Component</h1>
     </div>
@@ -54,4 +54,4 @@ const HeadingComponent2 = ()=> (
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeadingComponent2/>);
+root.render(<HeadingComponent/>);

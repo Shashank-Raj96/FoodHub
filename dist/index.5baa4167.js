@@ -2973,22 +2973,44 @@ var _clientDefault = parcelHelpers.interopDefault(_client);
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(parent);
 // React.createElement = ReactElement-JS object =HTMLElement(render)
-const heading = /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
-    id: "heading"
-}, "Namaste React");
-//JSX (transpiled before it reaches to the JS ) - transpiling by JS - DONE by BABEL
-//JSX =>  React.createElement = ReactElement-JS object =HTMLElement(render)
-const jsxHeading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-    id: "heading",
-    children: "Namaste React using JSX "
+const heading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+    className: "head",
+    tabIndex: "5",
+    children: "Namaste React using JSX"
 }, void 0, false, {
     fileName: "app.js",
-    lineNumber: 45,
-    columnNumber: 20
+    lineNumber: 36,
+    columnNumber: 1
 }, undefined);
-console.log(jsxHeading);
+// React Functional component
+// const HeadingComponent = ()=> {
+//     return <h1> Namaste React Functional Component</h1>;
+//};
+// Both are same
+const HeadingComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        id: "container",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+            className: "Heading",
+            children: " Namaste React Functional Component"
+        }, void 0, false, {
+            fileName: "app.js",
+            lineNumber: 48,
+            columnNumber: 5
+        }, undefined)
+    }, void 0, false, {
+        fileName: "app.js",
+        lineNumber: 47,
+        columnNumber: 3
+    }, undefined);
+_c = HeadingComponent;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-root.render(jsxHeading);
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingComponent, {}, void 0, false, {
+    fileName: "app.js",
+    lineNumber: 57,
+    columnNumber: 13
+}, undefined));
+var _c;
+$RefreshReg$(_c, "HeadingComponent");
 
   $parcel$ReactRefreshHelpers$6024.postlude(module);
 } finally {
