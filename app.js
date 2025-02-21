@@ -40,16 +40,16 @@
 
   
 
- const RestaurantCard =(props) => {
-  console.log(props);
+ const RestaurantCard =({resName , cuisine}) => {
+ 
   return(
     <div className="res-card" style={{backgroundColor:"#f0f0f0"}}>
      <img
      className="res-logo"
       alt="res-logo"
       src ="https://images.deliveryhero.io/image/fd-my/LH/zggt-listing.jpg"/>
-      <h3>{props.resName}</h3>
-      <h4> {props.cuisineName}</h4>
+      <h3>{resName}</h3>
+      <h4> {cuisine}</h4>
       <h4>4.4 Stars</h4>
       <h4>38 minutes</h4>
     
