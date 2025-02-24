@@ -1,3 +1,5 @@
+import {CDN_URL} from "../../utils/constants";
+
 const RestaurantCard = (props) => {
     const { resData } = props;
     const { info } = resData;
@@ -12,7 +14,7 @@ const RestaurantCard = (props) => {
               className="res-logo"
               alt="res-logo"
               src={
-                "RX_THUMBNAIL/IMAGES/VENDOR/2024/7/18/"+
+                 CDN_URL+
                 info.cloudinaryImageId 
               } 
               />
