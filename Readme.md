@@ -49,6 +49,14 @@ export const component;
 import {component} from "path";
 
 
+// REACT HOOKS
+
+(Normal JS Utility Function written by FB developers)
+when we write npm install parcel , then we will get all these utility function in our node module
+
+-useState() == used for genrating superpowerful state variable in react
+-useEffect()
+
 
 
 
