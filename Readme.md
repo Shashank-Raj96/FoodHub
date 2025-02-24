@@ -18,3 +18,21 @@
 1 - node Module
 2 - .parcel-cache
 3 - /dist
+
+
+### Food Ordering App
+/**
+ * Header
+ * logo
+ * nav items
+ * search
+ * RestaurantContainer
+ * RestaurantCard
+ * --Image
+ * -Name of Res , Star rating , cuisine , delievery time
+ * footer
+ * copyright
+ * Link
+ * Address 
+ * Contact
+ */
