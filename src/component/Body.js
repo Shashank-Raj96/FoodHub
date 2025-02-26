@@ -1,6 +1,6 @@
 
 import RestaurantCard from "./RestaurantCard";
-import{useState} from "react";
+import{useEffect, useState} from "react";
 import resList from "../../utils/mockData";
 
 const Body =() => {
@@ -9,6 +9,10 @@ const Body =() => {
 
     //Normal JS Variable
    // let ListofRestaurants= null;
+
+   useEffect(() =>{
+    console.log("useEffect Called");
+   },[]);
    
     return(
   <div className ="body">
