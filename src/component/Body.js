@@ -1,7 +1,7 @@
 
 import RestaurantCard from "./RestaurantCard";
 import{useEffect, useState} from "react";
-import resList from "../../utils/mockData";
+
 
 
 const Body = () => {
@@ -18,9 +18,13 @@ const Body = () => {
     );
 
     const json = await data.json();
-    console.log("21",json); // Log the structure of json.data.cards
+   // Log the structure of json.data.cards
     setListofRestaurants(json?.data?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   };
+
+  if(ListofRestaurants.length === 0){
+    return <h1>Loading...</h1>
+  }
 
   return (
     <div className="body">
@@ -40,7 +44,7 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {console.log("43" + ListofRestaurants)}
+       
 
         {ListofRestaurants?.map((restaurant) => (
         
