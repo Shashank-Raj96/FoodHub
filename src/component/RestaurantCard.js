@@ -4,10 +4,10 @@ const RestaurantCard = (props) => {
     const { resData } = props;
     const { info } = resData;
   
+ 
   
   
-  
-    console.log(info.name,info.cloudinaryImageId);
+    //console.log(info.name,info.cloudinaryImageId);
     return(
       <div className="res-card" style={{backgroundColor:"#f0f0f0"}}>
        <img
