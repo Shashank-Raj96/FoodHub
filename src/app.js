@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import Header from "./component/Header";
 import Body from "./component/Body"; 
 import About from "./component/About";
+import Contact from "./component/Contact";
 import { createBrowserRouter , RouterProvider} from "react-router";
  
 const AppLayout =() => {
@@ -23,6 +24,12 @@ const appRouter = createBrowserRouter([
     path: "/about",
     element: <About/>
   },
+
+  {
+    path: "/contact",
+    element: <Contact/>
+  },
+  
   
 ]);
 
