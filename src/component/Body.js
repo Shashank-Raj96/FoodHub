@@ -21,7 +21,7 @@ const Body = () => {
    // Log the structure of json.data.cards
     setListofRestaurants(json?.data?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   };
-
+  // Conditional Rendering
   if(ListofRestaurants.length === 0){
     return <Shimmer />;
   }
