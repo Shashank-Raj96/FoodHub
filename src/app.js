@@ -4,6 +4,7 @@ import Header from "./component/Header";
 import Body from "./component/Body"; 
 import About from "./component/About";
 import Contact from "./component/Contact";
+import Error from "./component/Error";
 import { createBrowserRouter , RouterProvider} from "react-router";
  
 const AppLayout =() => {
@@ -18,7 +19,8 @@ const AppLayout =() => {
 const appRouter = createBrowserRouter([
   {
     path: "/",
-    element: <AppLayout/>
+    element: <AppLayout/>,
+    errorElement: <Error/>,
   },
   {
     path: "/about",
