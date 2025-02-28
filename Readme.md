@@ -58,5 +58,8 @@ when we write npm install parcel , then we will get all these utility function i
 -useEffect()
 
 
+# 2 types of Routing
+- Client Side Routing == we are not making a network call because all the coponents are already loaded in our App
 
+- Server Side Routing == there are index.html . suppose we want / about , so it will go to index.html and it will make data call and fetch data and reload the page 
 
