@@ -17,7 +17,14 @@ class UserClass extends React.Component {
         return  (
              <div className="user-card">
             <h1>Count : {count}</h1>
-            <h1>Count 2 : {count2}</h1>
+           <button onClick={() => {
+              // Never Upda(te State Variable directly
+             this.setState ({
+                count : this.state.count + 1
+             })
+            }}
+           >
+            Count Increase</button>
             <h2> Name : {name} </h2>
             <h3> Location : {location} </h3>
         </div>
