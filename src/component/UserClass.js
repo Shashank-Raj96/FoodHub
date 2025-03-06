@@ -26,9 +26,15 @@ class UserClass extends React.Component {
         userInfo:json,
       })
 
-      console.log(json);
+     console.log(json);
     }
+  componentDidUpdate(){
+   console.log("Component Did Update"); 
+  }
 
+  componentWillUnmount(){
+    console.log("Componet will Unmount")
+  }
 
     render () {
        // console.log (this.props.name + "Child Render");
@@ -45,3 +51,22 @@ class UserClass extends React.Component {
 }
 
 export default UserClass;
+
+
+/**
+ * ----Mounting Lifecycle----
+ * 
+ * Constructor
+ * Render(dummy)
+ * <HTML Dummy >
+ * Component Did Mount 
+ * < API Call>
+ * <this.setStates> - state variable is updated
+ * 
+ * --- Update Cycle----
+ * 
+ * render (API data)
+ * <HTML(new API data)>
+ * ComponentDidUpdate
+ * 
+ */
