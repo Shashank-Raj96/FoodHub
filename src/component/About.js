@@ -8,18 +8,25 @@ class About extends Component {
 
         console.log("Parent Constructor")
     }
-render () {
-    console.log ("Parent Render");
+
+    componentDidMount (){
+        console.log ("Parent Component Did Mount")
+     // Api call
+    }
+
+    render () {
+      console.log ("Parent Render");
         return (
             <div>
             <h1>About Class Component </h1>
             <h2> This is Food Hub application</h2>
-           
             <UserClass  name ={"Shashank Raj ( class)"} location={"Dehradun Class"}/>
+            <UserClass  name ={"Shanu"} location={"Bihar Class"}/>
+
             </div>
         );
         }
-}
-
+       
+    }
 
     export default About;

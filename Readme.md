@@ -63,3 +63,21 @@ when we write npm install parcel , then we will get all these utility function i
 
 - Server Side Routing == there are index.html . suppose we want / about , so it will go to index.html and it will make data call and fetch data and reload the page 
 
+
+
+- Parent Constructor
+- Parent Render
+
+  - First Constructor
+  - First Render
+
+  - Second Constructor
+  - Second Render
+
+  after this Diff is calculated , reconsillation Occur and after that it is batched and DOM is updated
+
+  <DOM UPDATED - In Single Batch >
+  - First ComponentDidMount
+  - Second ComponentDidMount
+
+- Parent ComponentDidMount
