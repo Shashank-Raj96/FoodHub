@@ -11,7 +11,7 @@ import { Link } from "react-router";
    // if dependencies array has some values => useEffect is called on every render if any of the value in dependencies array changes
    // if dependencies array is [btnNameReact] => useEffect is called on every render if btnNameReact changes
    useEffect (() => {
-      console.log("useEffect called");
+      
    }, [btnNameReact]);
 
     return(
