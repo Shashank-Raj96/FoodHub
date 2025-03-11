@@ -55,8 +55,14 @@ const RestaurantMenu = () => {
             <h2>{itemInfo?.costForTwoMessage}</h2> 
 
             {/* categories accordiance*/}
-            {categories.map((category)=> (
-                <RestaurantCategory key={category?.card?.card?.title} data={category?.card?.card}/>
+            {categories.map((category , index)=> (
+                //controlled component
+                <RestaurantCategory 
+                key={category?.card?.card?.title}
+                 data={category?.card?.card}
+                 showItems={index ===1 ? true: false}
+                 />
+               
         ))}
 
             {/* <ul> 
