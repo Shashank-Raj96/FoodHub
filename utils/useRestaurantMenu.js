@@ -1,9 +1,9 @@
-import { useEffect } from "react";
+import { useEffect , useState } from "react";
 import { MENU_API } from "../utils/constants"
 const useRestaurantMenu = (resId) => {
 //fetchdata
-
-const {resInfo , setResInfo} = useState(null);
+console.log("5" , resId)
+const [resInfo , setResInfo] = useState(null);
 
     useEffect (() =>{
         fetchData();

@@ -12,6 +12,7 @@ const Body = () => {
   const [filteredRestaurants , setFilteredRestaurants] = useState([]);
   const [searchText , setsearchText ] = useState("");
 
+//console.log ("Body Rendered ", ListofRestaurants )
   useEffect(() => {
     fetchData();
   }, []);
@@ -44,15 +45,15 @@ const Body = () => {
 
   return (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className="flex">
+        <div className="search m-4 p-4">
           <input type="text" 
-          className="Search-box" 
+          className="border border-solid border-black" 
            value={searchText } 
            onChange={(e) => {
             setsearchText(e.target.value);
           }} />
-          <button
+          <button className="px-4 py-0.5  bg-green-100 m-4 rounded-lg"
            onClick={() => {
             //Filter the restaurant card and update the UI
             //searchText
@@ -69,24 +70,27 @@ const Body = () => {
             Search
             </button>
           </div>
-        <button
-          className="filter-btn"
-          onClick={() => {
+          <div className="m-4 p-0.5 flex items-center ">
+          <button
+            className="px-4 py-0.5 bg-gray-50 rounded-lg"
+            onClick={() => {
             // Filter Logic Here
             const filteredList = ListofRestaurants.filter(
-              (res) => res.info.avgRating > 3
-            )
-            setListofRestaurants(filteredList)
-            // console.log("Button Clicked")
-          }}
-        >
-          Top Rated Restaurants
-        </button>
+            (res) => res.info.avgRating > 1
+           )
+             setListofRestaurants(filteredList)
+             // console.log("Button Clicked")
+              }}
+             >
+Top Rated Restaurants
+</button>
+          </div>
+        
       </div>
-      <div className="res-container">
-       
 
-        {filteredRestaurants?.map((restaurant) => (
+
+      <div className=" flex flex-wrap">  
+          {filteredRestaurants?.map((restaurant) => (
         
           <Link 
           key = {restaurant?.info?.id}
