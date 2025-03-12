@@ -1,4 +1,4 @@
-import React , {lazy, Suspense} from "react";
+import React , {lazy, Suspense, useEffect , useState} from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./component/Header";
 import Body from "./component/Body"; 
@@ -9,6 +9,7 @@ import RestaurantMenu from "./component/RestaurantMenu";
 import { createBrowserRouter , RouterProvider ,Outlet} from "react-router";
 import RestaurantMenu from "./component/RestaurantMenu";
 //import Grocery from "./component/Grocery";
+import UserContext from "../utils/UserContext";
 
 // Chunking 
 // Code Splitting 
@@ -20,11 +21,24 @@ import RestaurantMenu from "./component/RestaurantMenu";
 const Grocery = lazy (() => import("./component/Grocery") );
 
 const AppLayout =() => {
+
+const [userName, setUserName] = useState();
+// Authentication 
+useEffect(() =>{
+  // Make an API cal and send username and Password
+  const data = {
+    name: "Shashank Raj",
+  } ;
+  setUserName(data.name);
+} , [])
+
   return (
+    <UserContext.Provider value={{loggedInUser :userName ,setUserName}}>
     <div className="app">
    <Header/>
    <Outlet/>
    </div>
+   </UserContext.Provider>
   );
 };
 
