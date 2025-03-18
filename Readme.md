@@ -81,3 +81,14 @@ when we write npm install parcel , then we will get all these utility function i
   - Second ComponentDidMount
 
 - Parent ComponentDidMount
+
+
+
+# Redux Toolkit
+- Install @reduxjs/Toolkit and react -redux
+- Build our store 
+- Connect our stote to our app 
+- Slice ( cart slice )
+- Dispatch (action)
+- Selector 
+ 
