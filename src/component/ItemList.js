@@ -2,19 +2,19 @@ import { useDispatch } from "react-redux";
 import { addItem } from "../../utils/cartSlice";
 import { CDN_URL } from "../../utils/constants";
 
-const ItemList =({items, dummy }) => {
+const ItemList =({items }) => {
 
    const dispatch = useDispatch();
 
-   const handleAddItem = () => {
+   const handleAddItem = (items) => {
     // Dispatch an action
-    dispatch(addItem("pizzas"));
+    dispatch(addItem(items));
    };
 
 
     return (
         <div>
-            {items.map((items=>
+            {items.map((items)=> (
                  <div
                   key={items.card.info.id}
                   className="p-2 m-2 border-l-gray-200 border-b-2 text-left flex justify-between"
@@ -36,7 +36,7 @@ const ItemList =({items, dummy }) => {
                         <div className="w-3/12 p-4">
                             <div className="absolute">
                                <button className="p-2 mx-6 rounded-lg bg-black text-white shadow-lg " 
-                                onClick ={handleAddItem}
+                                onClick ={() => handleAddItem(items)}
                                 >
                                 Add +
                                 </button>

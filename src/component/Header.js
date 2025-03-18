@@ -14,7 +14,7 @@ const Header = () => {
 
  // Subscribing to the store using a Selector
  const cartItems = useSelector((store) => store.cart.items);
- 
+
    useEffect (() => {
       
    }, [btnNameReact]);
@@ -42,7 +42,9 @@ const Header = () => {
                 <Link to="/grocery">Grocery</Link>
                 </li>
               <li className="px-4 font font-bold text-xl">
-                   Cart - ({cartItems.length} items)
+                  <Link to="/cart"> Cart - ({cartItems.length} items)</Link>
+                  
+                   
               </li>
               <button
                className ="Login"
